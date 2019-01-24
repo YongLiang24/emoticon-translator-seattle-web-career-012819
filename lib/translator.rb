@@ -4,9 +4,9 @@ def load_library(directory)
   # code goes here
   file_name = YAML.load_file(directory)
   data = {"get_meaning" => {}, "get_emoticon" => {}}
-  file_name.each do |meaning, emoticons|
-    data["get_meaning"][emoticons[1]] = meaning
-    data["get_emoticon"][emoticons[0]] = emoticons[1]
+  file_name.each do |def, emo|
+    data["get_meaning"][emo[1]] = def
+    data["get_emoticon"][emo[0]] = emo[1]
   end
   return data
 end
