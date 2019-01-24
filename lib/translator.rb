@@ -13,11 +13,11 @@ def load_library(directory)
   return data
 end
 
-def get_japanese_emoticon(file_path = './lib/emoticons.yml', english_emoticon)
+def get_japanese_emoticon(directory = './lib/emoticons.yml', en_emo)
   # code goes here
-  library = load_library(file_path)
-  if library["get_emoticon"].include?(english_emoticon)
-    library["get_emoticon"][english_emoticon]
+  data = load_library(directory)
+  if data["get_emoticon"].include?(en_emo)
+    data["get_emoticon"][english_emoticon]
   else
     "Sorry, that emoticon was not found"
   end
