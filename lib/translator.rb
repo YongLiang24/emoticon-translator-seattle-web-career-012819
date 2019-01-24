@@ -3,10 +3,10 @@
 def load_library(directory)
   # code goes here
   file_name = YAML.load_file(directory)
-  result = {"get_meaning" => {}, "get_emoticon" => {}}
+  data = {"get_meaning" => {}, "get_emoticon" => {}}
   file_name.each do |meaning, emoticons|
-    result["get_meaning"][emoticons[1]] = meaning
-    result["get_emoticon"][emoticons[0]] = emoticons[1]
+    data["get_meaning"][emoticons[1]] = meaning
+    data["get_emoticon"][emoticons[0]] = emoticons[1]
   end
   return result
 end
