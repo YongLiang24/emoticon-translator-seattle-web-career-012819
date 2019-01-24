@@ -23,6 +23,12 @@ def get_japanese_emoticon(directory = './lib/emoticons.yml', en_emo)
   end
 end
 
-def get_english_meaning
+def get_english_meaning(directory = './lib/emoticons.yml', jap_emo)
   # code goes here
+  data = load_library(directory)
+  if data["get_meaning"].include?(jap_emo) 
+    data["get_meaning"][jap_emo]
+  else
+    "Sorry, that emoticon was not found"
+  end
 end
