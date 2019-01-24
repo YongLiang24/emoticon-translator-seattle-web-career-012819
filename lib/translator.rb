@@ -26,7 +26,7 @@ end
 def get_english_meaning(directory = './lib/emoticons.yml', jap_emo)
   # code goes here
   data = load_library(directory)
-  if data["get_meaning"].include?(jap_emo) 
+  if data["get_meaning"].include?(jap_emo)
     data["get_meaning"][jap_emo]
   else
     "Sorry, that emoticon was not found"
