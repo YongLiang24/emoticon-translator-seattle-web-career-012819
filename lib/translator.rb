@@ -8,7 +8,7 @@ def load_library(directory)
     data["get_meaning"][emoticons[1]] = meaning
     data["get_emoticon"][emoticons[0]] = emoticons[1]
   end
-  return result
+  return data
 end
 
 def get_japanese_emoticon
