@@ -2,13 +2,13 @@
 
 def load_library(directory)
   # code goes here
-  library = YAML.load_file(directory)
+  file_name = YAML.load_file(directory)
   result = {"get_meaning" => {}, "get_emoticon" => {}}
-  library.each do |meaning, emoticons|
+  file_name.each do |meaning, emoticons|
     result["get_meaning"][emoticons[1]] = meaning
     result["get_emoticon"][emoticons[0]] = emoticons[1]
   end
-  result
+  return result
 end
 
 def get_japanese_emoticon
